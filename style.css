@@ -29,14 +29,19 @@ body {
 }
 
 #page-container {
+	/* background-color: yellow; */
+	position: absolute;
+	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 #header {
+	/* background-color: orange; */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -48,15 +53,28 @@ body {
 }
 
 .header-item {
+	/* background-color: red; */
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	align-items: center;
 }
 
 .header-item a {
 	margin: 0 2vw;
 	text-decoration: none;
 	color: inherit;
+}
+
+.header-item div {
+	margin: 0 .5vw 0 0;
+}
+
+.left {
+	align-items: center;
+}
+
+.right {
+	align-items: center;
 }
 
 #content-container {
@@ -75,6 +93,7 @@ body {
 }
 
 #project-menu {
+	/* background-color: blue; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -90,7 +109,6 @@ body {
 }
 
 .active-project {
-	/* color: red; */
 	border-bottom: 2px solid white;
 }
 
@@ -99,6 +117,7 @@ body {
 }
 
 #phone-container {
+	/* background-color: red; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -118,6 +137,7 @@ body {
 }
 
 #description-container {
+	/* background-color: green; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -126,20 +146,21 @@ body {
 }
 
 #description-container > div {
+	/* background-color: purple; */
 	width: 70%;
-	margin: 5vh 0;
+	margin: 5% 0;
 }
 
 #description-container .num {
 	font-weight: 500;
 	letter-spacing: 3px;
-	margin-bottom: 2vh;
+	margin-bottom: 2%;
 }
 
 #description-container .title {
 	font-weight: 300;
 	letter-spacing: 5px;
-	margin-bottom: 3vh;
+	margin-bottom: 3%;
 }
 
 #description-container .description {
@@ -163,7 +184,7 @@ body {
 	font-weight: 300;
 	letter-spacing: 1px;
 	line-height: auto;
-	margin-top: 4vh;
+	margin-top: 4%;
 	cursor: pointer;
 }
 
@@ -186,20 +207,37 @@ body {
 		width: 100%;
 	}
 
+	.header-item {
+		flex-direction: column;
+	}
+
+	.left {
+		align-items: flex-start;
+	}
+
+	.right {
+		align-items: flex-end;
+	}
+
 	#project-menu {
 		width: 20%;
 	}
 
 	#phone-container {
 		justify-content: center;
-		width: 70%;
+		width: 80%;
 	}
 
-	#test {
-		width: 40%;
+	#ad {
+		width: 35%;
 	}
 
 	#description-container > div {
-		width: 85%;
+		width: 100%;
+		height: 100%;
+	}
+
+	.num {
+		visibility: hidden;
 	}
 }
